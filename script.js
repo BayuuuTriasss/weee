@@ -10,7 +10,19 @@ function goToStep(step) {
 const noBtn = document.getElementById("noBtn");
 
 if (noBtn) {
+
+  // Kabur saat mouse mendekat
   noBtn.addEventListener("mouseover", function () {
+    const x = Math.random() * window.innerWidth * 0.7;
+    const y = Math.random() * window.innerHeight * 0.7;
+    noBtn.style.left = x + "px";
+    noBtn.style.top = y + "px";
+  });
+
+  // Kabur saat diclick (tidak bisa dipencet)
+  noBtn.addEventListener("click", function (e) {
+    e.preventDefault(); // mencegah klik berfungsi
+
     const x = Math.random() * window.innerWidth * 0.7;
     const y = Math.random() * window.innerHeight * 0.7;
     noBtn.style.left = x + "px";
@@ -100,5 +112,6 @@ function restartGame() {
 function accepted() {
   goToStep(7);
 }
+
 
 

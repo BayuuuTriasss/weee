@@ -109,6 +109,7 @@ button {
   position: absolute;
   box-shadow: 0 0 12px rgba(255, 70, 70, 0.4);
   transition: 0.2s;
+    position: absolute;
 }
 
 /* Tombol final: Hijau cerah */
@@ -220,4 +221,5 @@ video {
   pointer-events: auto;
   display: block;
 }
+
 

@@ -1,0 +1,216 @@
+/* ============================================================
+   GLOBAL STYLE – TEMA LUPUS
+   ============================================================ */
+body {
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(135deg, #d9f2ff, #c9d6ff, #ffe8a1);
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding-top: 60px;
+  animation: bgFloat 8s infinite alternate ease-in-out;
+}
+
+@keyframes bgFloat {
+  0% { background-position: 0% 50%; }
+  100% { background-position: 100% 50%; }
+}
+
+.hidden {
+  display: none;
+}
+
+/* ============================================================
+   CONTAINER CARD
+   ============================================================ */
+.container {
+  width: 80%;
+  max-width: 520px;
+  background: rgba(255, 255, 255, 0.65);
+  backdrop-filter: blur(12px);
+  padding: 35px 25px;
+  border-radius: 20px;
+  margin-bottom: 25px;
+  box-shadow: 0 8px 25px rgba(70, 110, 255, 0.25);
+  animation: fadeIn 0.7s ease-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(25px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ============================================================
+   TEXT STYLE
+   ============================================================ */
+h1, h2 {
+  color: #3a4fff; /* biru komik */
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+p {
+  line-height: 1.7;
+  font-size: 17px;
+  margin-bottom: 15px;
+}
+
+/* FINAL TEXT */
+.final-text {
+  margin-top: 35px;
+  color: #ffb400; /* kuning cerah khas cover novel Lupus */
+  font-size: 26px;
+  font-weight: 700;
+  animation: pulseText 2s infinite ease-in-out;
+}
+
+@keyframes pulseText {
+  0%   { transform: scale(1); opacity: 1; }
+  50%  { transform: scale(1.06); opacity: 0.85; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+/* ============================================================
+   BUTTONS – ALA LUPUS
+   ============================================================ */
+button {
+  padding: 12px 25px;
+  font-size: 18px;
+  border: none;
+  cursor: pointer;
+  border-radius: 12px;
+  margin-top: 18px;
+  transition: 0.25s;
+  font-weight: 600;
+}
+
+/* Tombol normal: Biru cerah */
+.next-btn,
+.yes-btn {
+  background: #3a64ff;
+  color: white;
+  box-shadow: 0 0 12px rgba(58, 100, 255, 0.4);
+}
+
+.next-btn:hover,
+.yes-btn:hover {
+  background: #2a52f5;
+  box-shadow: 0 0 18px rgba(58, 100, 255, 0.7);
+}
+
+/* Tombol NO (kabur): Merah komik */
+.no-btn {
+  background-color: #ff4747;
+  color: white;
+  position: absolute;
+  box-shadow: 0 0 12px rgba(255, 70, 70, 0.4);
+  transition: 0.2s;
+}
+
+/* Tombol final: Hijau cerah */
+.yes-final {
+  background-color: #00d67a;
+  color: #003312;
+  box-shadow: 0 0 12px rgba(0, 215, 122, 0.45);
+}
+
+.yes-final:hover {
+  background-color: #00c46c;
+  box-shadow: 0 0 18px rgba(0, 215, 122, 0.7);
+}
+
+/* ============================================================
+   MINI GAME AREA
+   ============================================================ */
+#gameArea {
+  width: 90%;
+  height: 380px;
+  margin: 20px auto;
+  background: #0d0223;
+  border-radius: 15px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 0 22px rgba(110, 70, 255, 0.4);
+  background-image: linear-gradient(rgba(255,255,255,0.05) 1px, transparent 1px),
+                    linear-gradient(90deg, rgba(255,255,255,0.05) 1px, transparent 1px);
+  background-size: 40px 40px;;
+}
+
+/* Heart → ganti jadi ikon ⭐ biar lebih “komik Lupus” */
+.heart {
+  font-size: 33px;
+  position: absolute;
+  cursor: pointer;
+  animation: float 2s infinite ease-in-out;
+}
+
+/* Animasi objek */
+@keyframes float {
+  0%   { transform: translateY(0px); }
+  50%  { transform: translateY(-10px); }
+  100% { transform: translateY(0px); }
+}
+
+/* Foto objek */
+.poto {
+  position: absolute;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.potoimg {
+  width: 90px;
+  height: 80px;
+  pointer-events: none;
+}
+.bomimg {
+  width: 140px;
+  height: 120px;
+  pointer-events: none;
+}
+
+/* ============================================================
+   GAME OVER SCREEN
+   ============================================================ */
+#gameOverScreen {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+  background: rgba(0, 0, 0, 0.65);
+  color: #fff;
+  z-index: 20;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 18px;
+}
+
+#gameOverScreen img {
+  width: 120px;
+}
+
+#gameOverScreen button {
+  background: #ff4747;
+  color: white;
+  padding: 10px 18px;
+  border-radius: 10px;
+  font-size: 17px;
+  cursor: pointer;
+}
+ 
+video {
+  width: 100%;
+  height: auto;
+  border-radius: 15px;
+  margin-bottom: 15px;
+  pointer-events: auto;
+  display: block;
+}

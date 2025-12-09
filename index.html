@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tembak Gaya Lupus</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- STEP 1 -->
+<div class="container" id="step1">
+  <h1>Hai…</h1>
+  <p>
+    Aku cuma mau bilang… aku gak lagi ngutang pulsa,  
+    gak lagi jualan cilok, dan gak lagi nyari kucing hilang.  
+    Aku cuma mau ngomong sesuatu yang bikin jantungku  
+    kayak Supra dipaksa drag tengah malam.
+  </p>
+  <button class="next-btn" onclick="goToStep(2)">Lanjut</button>
+</div>
+
+<!-- STEP 2 -->
+<div class="container hidden" id="step2">
+  <img 
+  src="https://media.tenor.com/rQny9TWXi0IAAAAM/yellow-dragon-nailong.gif" 
+  class="img" 
+  referrerpolicy="no-referrer"
+/>
+  <h2>Sebelum lanjut…</h2>
+  <p>Kamu nih orangnya jujur kan?</p>
+  <button class="yes-btn" onclick="goToStep(3)">Yes</button>
+  <button id="noBtn" class="no-btn">No</button>
+</div>
+
+<!-- STEP 3 -->
+<div class="container hidden" id="step3">
+  <video src="vp1.mp4" class="video" autoplay muted playsinline loop></video>
+  <p>
+    Oke sip.. <br>
+    Jadi gini semenjak aku kenal kamu pertama kali tuh… sumpah, kamu orang paling ramah seospek wkwkwk. sampe ku mikir ini hologram kiriman malaikat kah?
+    Tapi anehnya, tiap mo ajak ngobrol ku langsung gugup sendiri, kayak ayam salah kandang. Padahal kamu nggak makan orang… paling makan ayam.
+  </p>
+  <button class="next-btn" onclick="goToStep(4)">Lanjut</button>
+</div>
+
+<!-- STEP 4 -->
+<div class="container hidden" id="step4">
+  <img src="https://p0.itc.cn/q_70/images03/20231026/dfa454da50d347cd925c71ba3db519d9.gif" class="img">
+  <p>
+    Aku suka cara kamu ngomong… kadang cepet, kadang lambat,  
+    kadang random kayak wifi kos-kosan.  
+    Tapi entah kenapa… aku tetep betah.
+  </p>
+  <p>
+    Aku suka liat kamu ketawa… lebarnya kadang kelewatan dikit sih…  
+    tapi itu yang bikin hari aku cerah mendadak.
+  </p>
+  <button class="next-btn" onclick="goToStep(5)">Mulai Mini Game</button>
+</div>
+
+<!-- STEP 5 - GAME -->
+<div class="container hidden" id="step5">
+  
+  <h2>Kumpulin 5 kepala alboy dulu</h2>
+
+  <div id="gameArea"></div>
+  <p id="score">0 / 5</p>
+
+  <div id="gameOverScreen" class="hidden">
+    <img src="topi.jpg" class="img">
+    <button onclick="restartGame()">Ulangi Permainan</button>
+  </div>
+</div>
+
+<!-- STEP 6 -->
+<div class="container hidden" id="step6">
+
+  <h2>Oke… serius nih.</h2>
+  <p>
+    Setelah penelitian rumit, percobaan, dan survei ke abang bakso depan kos…  
+    hasilnya cuma satu:
+  </p>
+
+  <h1 class="final-text">
+    Aku naksir kamu.  
+    Jadi… mau gak jadi pacarku? 🤍
+  </h1>
+
+  <button class="yes-final" onclick="accepted()">Mau</button>
+  <button class="yes-final" onclick="">Harus Mau</button>
+</div>
+
+<!-- STEP 7 -->
+<div class="container hidden" id="step7">
+  <img src="img/yeay.png" class="img">
+  <h1>YEAAAYY!! 🤍</h1>
+  <p>UHUYYY JADIII KITA 🤪=</p>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
